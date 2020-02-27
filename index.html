@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="planetTexture" src="Blue-green-sea-surface-background-with-fishes-full-frame-composition-DWGX61-1550x804.jpg">
+            <img id="planetTexture2" src="sea.jpeg">
+            <img id="wood" src="wood.jpg">
+            <img id="metal" src="metal.jpeg"></a-assets>
+        <a-entity environment></a-entity>
+        <a-entity environment="preset: osiris; groundYScale: 28">
+            <a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 28" shadow="cast: false; receive: false"></a-entity>
+        </a-entity>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-box position="-1.80026 0.5 -3" rotation="" src="#wood" data-brackets-id="1684" material="" geometry="" scale="0.2 1.31 0.09"></a-box>
+        <a-sphere data-brackets-id="587" src="#planetTexture" position="0 5.19443 -5" radius="1.25" color="#EF2D5E" material="" geometry="" shadow animation="property: rotation; to: 0 360 0; dur: 3500; easing:  linear; loop:true; dir: alternate">
+        </a-sphere>
+        <a-sphere data-brackets-id="1134" src="#planetTexture2" position="-2.62104 9.27131 -3.12711" radius="1.25" color="#FFC65D" material="" geometry="" shadow="" animation="property: rotation; to: 0 360 0; dur: 3500; easing: linear; loop: true; dir: alternate">
+        </a-sphere>
+        <a-sphere data-brackets-id="856" src="#planetTexture2" position="-3.82493 5.19443 -3.12711" radius="1.25" color="#4CC3D9" material="" geometry="" shadow animation="property: rotation; to: 0 360 0; dur: 3500; easing:  linear; loop:true; dir: alternate">
+        </a-sphere>
+        <a-plane data-brackets-id="1705" position="-1.79355 1.66207 -3" material="" geometry="" color="#4CC3D9" scale="1.27 1.02 1.15"></a-plane>
+        <a-entity data-brackets-id="1426" text="value: Welcome to planet
+                                                Zonks, home to the
+                                                biggest collection
+                                                of human media!; color: #BBB" position="-0.9 1.69458 -3" scale="2.89 3.49 3.04"></a-entity>
+        <a-sky></a-sky>
+    </a-scene>
+</body></html>
